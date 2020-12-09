@@ -3,9 +3,8 @@ package pl.bartflor.riverlog.infrastructure.filedatasource;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.bartflor.riverlog.domain.riverlog.Coordinates;
+import pl.bartflor.riverlog.domain.riversection.Coordinates;
 import pl.bartflor.riverlog.domain.riversection.RiverSection;
-import pl.bartflor.riverlog.infrastructure.database.riversection.RiverSectionEntity;
 
 import java.net.URL;
 

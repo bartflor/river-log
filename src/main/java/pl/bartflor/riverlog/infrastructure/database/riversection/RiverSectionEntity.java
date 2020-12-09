@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.bartflor.riverlog.domain.riverlog.Coordinates;
+import pl.bartflor.riverlog.domain.riversection.Coordinates;
 import pl.bartflor.riverlog.domain.riversection.RiverSection;
 
 import javax.persistence.*;

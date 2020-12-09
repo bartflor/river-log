@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pl.bartflor.riverlog.domain.riversection.RiverSection;
-import pl.bartflor.riverlog.infrastructure.database.riversection.RiverSectionService;
+import pl.bartflor.riverlog.domain.riversection.RiverSectionService;
 
 import java.util.List;
 

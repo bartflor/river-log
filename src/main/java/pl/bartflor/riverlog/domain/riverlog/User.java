@@ -1,8 +1,6 @@
-package pl.bartflor.riverlog.domain.common;
+package pl.bartflor.riverlog.domain.riverlog;
 
 import lombok.Data;
-import pl.bartflor.riverlog.domain.riverlog.RiversLog;
-import pl.bartflor.riverlog.domain.riverlog.RunLog;
 
 @Data
 public class User {
@@ -13,6 +11,6 @@ public class User {
 	private RiversLog userLog;
 	
 	public void logNewRun(RunLog runLog){
-	
+		userLog.addNewLog(runLog);
 	}
 }

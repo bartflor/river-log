@@ -2,8 +2,7 @@ package pl.bartflor.riverlog;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-import pl.bartflor.riverlog.infrastructure.database.riversection.RiverSectionRepository;
-import pl.bartflor.riverlog.infrastructure.database.riversection.RiverSectionService;
+import pl.bartflor.riverlog.domain.riversection.RiverSectionService;
 import pl.bartflor.riverlog.infrastructure.filedatasource.RivermapSource;
 import pl.bartflor.riverlog.infrastructure.filedatasource.SectionDto;
 
