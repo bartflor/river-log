@@ -6,6 +6,7 @@ import pl.bartflor.riverlog.domain.riversection.RiverSection;
 import pl.bartflor.riverlog.domain.riversection.RiverSectionRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 @AllArgsConstructor
@@ -18,6 +19,11 @@ public class RiverSectionDbRepository implements RiverSectionRepository {
 	
 	public List<RiverSection> getAllSections() {
 		return jpaRepository.findAll();
+	}
+	
+	@Override
+	public Optional<RiverSection> findSectionById(Long sectionId) {
+		return jpaRepository.findById(sectionId);
 	}
 	
 }

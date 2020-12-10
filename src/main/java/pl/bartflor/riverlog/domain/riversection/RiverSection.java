@@ -18,19 +18,25 @@ import java.util.List;
 public class RiverSection {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Long id;
 	private String riverName;
 	private String sectionName;
+	@Enumerated(EnumType.STRING)
 	private SectionType sectionType;
 	@Embedded
+	@AttributeOverride(name = "longitude", column = @Column(name = "start_longitude"))
+	@AttributeOverride(name = "latitude", column = @Column(name = "start_latitude"))
 	private Coordinates start;
 	@Embedded
+	@AttributeOverride(name = "longitude", column = @Column(name = "end_longitude"))
+	@AttributeOverride(name = "latitude", column = @Column(name = "end_latitude"))
 	private Coordinates end;
 	private String grade;
 	private String spotsGrade;
 	private String country;
 	private URL mapUrl;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "river_section_id")
 	@Builder.Default private List<Opinion> opinionList = new ArrayList<>();
 	@Builder.Default private boolean currentlyExistingHazard = false;
 	
@@ -38,7 +44,7 @@ public class RiverSection {
 		SECTION, PLAYSPOT, DROP, SLALOM
 	}
 	
-	public void giveOpinion(Opinion opinion){
+	public void addOpinion(Opinion opinion){
 		opinionList.add(opinion);
 	}
 	

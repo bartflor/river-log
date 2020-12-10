@@ -15,6 +15,6 @@ public class DataUpdateManager {
 	public void updateDbRecords(){
 		rivermapSource.getSections().stream()
 				.map(SectionDto::toDomain)
-				.forEach(riverSection -> sectionService.addNewSection(riverSection));
+				.forEach(riverSection -> sectionService.saveSection(riverSection));
 	}
 }
