@@ -3,8 +3,8 @@ package pl.bartflor.riverlog.interfaces.rest;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import pl.bartflor.riverlog.domain.riverlog.RiverLog;
-import pl.bartflor.riverlog.domain.riverlog.RunLog;
 import pl.bartflor.riverlog.domain.riverlog.UserService;
+import pl.bartflor.riverlog.domain.riverlog.UserServiceImpl;
 
 
 @RestController

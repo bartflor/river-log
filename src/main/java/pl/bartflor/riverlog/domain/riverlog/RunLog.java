@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.ManyToAny;
 import pl.bartflor.riverlog.domain.riversection.RiverSection;
 
 import javax.persistence.*;
