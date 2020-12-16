@@ -1,11 +1,10 @@
 package pl.bartflor.riverlog.interfaces.rest;
 
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import pl.bartflor.riverlog.domain.riversection.Opinion;
 import pl.bartflor.riverlog.domain.riversection.RiverSection;
-import pl.bartflor.riverlog.infrastructure.database.riversection.RiverSectionService;
+import pl.bartflor.riverlog.domain.riversection.RiverSectionService;
 
 import java.util.List;
 
@@ -20,7 +19,10 @@ public class SectionsController {
 		return sectionService.getAll();
 	}
 	
-	
+	@PostMapping("/{sectionId}")
+	public void giveSectionOpinion(@PathVariable Long sectionId, @RequestBody Opinion opinion){
+		sectionService.giveSectionOpinion(sectionId, opinion);
+	}
 }
 
 
